@@ -1,0 +1,110 @@
+object Form4: TForm4
+  Left = 1577
+  Height = 656
+  Top = 55
+  Width = 1090
+  Caption = 'Master/Detail Data'
+  ClientHeight = 656
+  ClientWidth = 1090
+  DesignTimePPI = 192
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 336
+    Height = 46
+    Top = 8
+    Width = 322
+    Caption = 'Master/Detail Data'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -37
+    Font.Name = 'Trebuchet MS'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBGrid1: TDBGrid
+    Left = 64
+    Height = 360
+    Top = 64
+    Width = 328
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 0
+  end
+  object DBGrid2: TDBGrid
+    Left = 416
+    Height = 360
+    Top = 64
+    Width = 624
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource2
+    TabOrder = 1
+  end
+  object DataSource1: TDataSource
+    DataSet = ZQuery1
+    Left = 104
+    Top = 304
+  end
+  object DataSource2: TDataSource
+    DataSet = ZQuery2
+    Left = 512
+    Top = 192
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM kategori'
+    )
+    Params = <>
+    Left = 104
+    Top = 184
+  end
+  object ZQuery2: TZQuery
+    Connection = ZConnection2
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM data_barang'
+    )
+    Params = <>
+    Left = 672
+    Top = 192
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=ON'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'dbbarang'
+    User = 'root'
+    Protocol = 'mysql-5'
+    LibraryLocation = 'C:\Users\chokk\OneDrive\Documents\mysql\mysql-5.7.43-win32\lib\libmysql.dll'
+    Left = 248
+    Top = 304
+  end
+  object ZConnection2: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=ON'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'dbbarang'
+    User = 'root'
+    Protocol = 'mysql-5'
+    LibraryLocation = 'C:\Users\chokk\OneDrive\Documents\mysql\mysql-5.7.43-win32\lib\libmysql.dll'
+    Left = 832
+    Top = 192
+  end
+end
