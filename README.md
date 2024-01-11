@@ -4,7 +4,7 @@ KELAS   : TI.21.A.3
 
 Link Video Demo (YouTube) : https://youtu.be/bhYozc4jbrM?si=-ba9gYcam-FsSmKk 
 
-~PROJECT APLIKASI BARANG MENGGUNAKAN LAZARUS~
+*PROJECT APLIKASI BARANG MENGGUNAKAN LAZARUS*
 Berikut adalah detail project yang dibuat :
 
 1. Form Login
